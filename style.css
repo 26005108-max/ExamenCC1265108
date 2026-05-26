@@ -1,0 +1,118 @@
+/* a) Variables para Modo Claro y Oscuro */
+:root {
+    --bg-color: #f4f7f6;
+    --text-color: #333333;
+    --box-bg: #ffffff;
+    --border-color: #dddddd;
+    --primary-color: #e67e22; /* Naranja de seguridad */
+    --primary-hover: #d35400;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f4f7f6;
+    --box-bg: #2d2d2d;
+    --border-color: #444444;
+}
+
+/* Configuraciones Globales y Responsive Design */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.contenedor-principal {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.theme-toggle-container {
+    text-align: right;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+/* Contenedores Claramente Identificables */
+.caja-seccion {
+    background-color: var(--box-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.4s ease, border-color 0.4s ease;
+}
+
+.logo-principal {
+    max-width: 120px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+/* Botones y Enlaces (Hover CSS3) */
+.btn-accion, .btn-enlace {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-accion:hover, .btn-enlace:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05); /* Efecto Hover moderno */
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
+}
+
+.btn-peligro { background-color: #c0392b; }
+.btn-peligro:hover { background-color: #922b21; box-shadow: 0 5px 15px rgba(192, 57, 43, 0.4); }
+
+.geo-btn { background-color: #2980b9; }
+.geo-btn:hover { background-color: #1a5276; box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4); }
+
+/* Formulario */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px 0;
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Grid Enlaces y Logo Galileo */
+.grid-enlaces {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.galileo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.logo-galileo { width: 80px; }
+
+/* Canvas */
+#canvas-nombre {
+    display: block;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    border: 2px dashed var(--border-color);
+    border-radius: 5px;
+}

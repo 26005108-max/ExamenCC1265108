@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguridad Industrial PWA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="theme-toggle-container">
+        <button id="btn-theme" class="btn-accion">🌙 Cambiar a Modo Oscuro</button>
+    </div>
+
+    <div class="contenedor-principal">
+        
+        <section id="bienvenida" class="caja-seccion">
+            <img src="logo-prevencion.png" alt="Logo Prevención de Riesgos" class="logo-principal">
+            <h1>Sistema de Seguridad Industrial</h1>
+            <h2>Nuestra Misión</h2>
+            <p>Garantizar un entorno de trabajo seguro y saludable, previniendo riesgos laborales y promoviendo el uso correcto del Equipo de Protección Personal (EPP).</p>
+            <button id="btn-voz" class="btn-accion">🔊 Escuchar Norma de Seguridad</button>
+        </section>
+
+        <section id="tienda-reporte" class="caja-seccion">
+            <h2>Tienda EPP y Reporte de Riesgos</h2>
+            <p><em>* Sección de tienda y reportes activa.</em></p>
+            <hr>
+            <h3>Formulario de Incidente</h3>
+            <form id="form-incidente">
+                <label for="area">Área de la planta:</label>
+                <input type="text" id="area" placeholder="Ej. Producción, Bodega...">
+                
+                <label for="incidente">Descripción del Incidente/Riesgo:</label>
+                <input type="text" id="incidente" placeholder="Describe el riesgo observado...">
+                
+                <button type="submit" class="btn-accion">Enviar Reporte</button>
+            </form>
+
+            <hr>
+            <h3>Ubicación del Incidente</h3>
+            <button id="btn-geo" class="btn-accion geo-btn">📍 Capturar mi Ubicación Exacta</button>
+            <p id="resultado-geo">Latitud: --- | Longitud: ---</p>
+        </section>
+
+        <section id="enlaces" class="caja-seccion">
+            <h2>Enlaces de Interés</h2>
+            <div class="grid-enlaces">
+                <a href="https://tusitio.wixsite.com/t14" target="_blank" class="btn-enlace">Sitio en Wix (T14)</a>
+                <a href="https://youtube.com/tu_video" target="_blank" class="btn-enlace">Video Promocional (YT)</a>
+                <a href="#" class="btn-enlace">Redes Sociales (T15)</a>
+            </div>
+            
+            <hr>
+            <div class="galileo-box">
+                <img src="logo-galileo.png" alt="Logo Universidad Galileo" class="logo-galileo">
+                <a href="https://www.galileo.edu/" target="_blank" class="btn-enlace">Universidad Galileo</a>
+            </div>
+        </section>
+
+        <section id="salida" class="caja-seccion">
+            <h2>Firma de Autoría (Canvas)</h2>
+            <canvas id="canvas-nombre" width="300" height="80"></canvas>
+            <br>
+            <button id="btn-salir" class="btn-accion btn-peligro">Cerrar Sesión / Salir</button>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
